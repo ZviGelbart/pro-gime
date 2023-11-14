@@ -1,0 +1,50 @@
+body,
+head {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    
+
+}
+
+#head {}
+
+.the_game {
+    width: 85%;
+    border: 1px solid;
+    display:flex;
+    gap: 1px;
+    flex-direction: column;
+    margin: auto; /* מיישור למרכז באמצעות Flexbox */
+
+
+}
+
+.head_of_the_game{
+    border: 1px solid;
+    display: flex;
+    gap: 1px;
+
+}
+.trial{
+    flex: 1;
+    border: 1px solid;
+
+}
+.level {
+    flex: 3;
+    border: 1px solid;
+
+}
+#timer {
+    flex: 1;
+    border: 1px solid;
+
+}
+.the_body_of_the_game {
+    border: 1px solid;
+
+}
