@@ -25,6 +25,6 @@ function shuffleArray(array) {
   // Example usage
 
   let arr = createArray(16);
-  shuffleArray(arr) //פה הוא משנה את המשתנה המערך המסודר ופשוט מפעיל על המשתנה של המערך המסודר את העירבוב ועכשיו המערך = מעורבב
-  console.log(arr);
+  let mixedArr = shuffleArray(arr) //פה הוא משנה את המשתנה המערך המסודר ופשוט מפעיל על המשתנה של המערך המסודר את העירבוב ועכשיו המערך = מעורבב
+  console.log(mixedArr);
   
