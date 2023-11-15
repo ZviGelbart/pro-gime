@@ -88,7 +88,7 @@ function cardClicked(event) {
     if (firstCard.textContent === clickedCard.textContent) {
       console.log("הכרטיסים זהים!");
       compareCards(true)
-      reduceQueue()
+      reduceRound()
       resetBoard();
     
     } else {
@@ -98,7 +98,7 @@ function cardClicked(event) {
         clickedCard.classList.add("hidden");
         clickedCard.classList.remove("overt");
         compareCards(false)
-        reduceQueue()
+        reduceRound()
         resetBoard();
       }, 1000);
     }
