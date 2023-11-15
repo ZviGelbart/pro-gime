@@ -1,4 +1,4 @@
-let number_of_cards = 50;
+let number_of_cards = 40;
 
 // Function to create and mix array
 function createArray(number) {
@@ -37,6 +37,9 @@ function makeTheTable(mixedArr) {
   }
   else if (mixedArr.length === 50) {
     column = 10;
+  }
+  else if (mixedArr.length === 40) {
+    column = 8;
   }
   let column_counter = 0;
   let tableHTML  = "<table><tr>";
@@ -85,7 +88,9 @@ function cardClicked(event) {
     if (firstCard.textContent === clickedCard.textContent) {
       console.log("הכרטיסים זהים!");
       compareCards(true)
+      reduceQueue()
       resetBoard();
+    
     } else {
       setTimeout(() => {
         firstCard.classList.add("hidden");
@@ -93,6 +98,7 @@ function cardClicked(event) {
         clickedCard.classList.add("hidden");
         clickedCard.classList.remove("overt");
         compareCards(false)
+        reduceQueue()
         resetBoard();
       }, 1000);
     }

@@ -67,9 +67,10 @@ table{
     border-collapse: separate; /* מוריד רכיבי טבלה קיימים כמו border-spacing כדי לא לשתף אותם */
     border-spacing: 5px 5px; /* רווח ברוחב 20px ובגובה 10px */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 8); /* צל עם 5 פיקסלים לימין, 5 פיקסלים למטה, 10 פיקסלים רמת חושיל וצבע שחור עם שקיפות 10% */
+
 }
 td {
-    
+    margin: 10px;
 }
 .overt{
     border: 1px solid;
