@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>משחק הזכרון</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gameover.css" />
+  </head>
 
-<body>
+  <body>
     <div id="head">head</div>
     <div class="the_game">
-        <div class="head_of_the_game">
-            <div class="trial">trial <span id="score">30</span></div>
-            <div class="point"><span id="point">100</span> point</div>
-            <div class="level">level</div>
-            <div id="timer"></div>
-        </div>
-        <div id="the_body_of_the_game" class="the_body_of_the_game">the_body_of_the_game</div>
-        
+      <div class="head_of_the_game">
+        <div class="trial">trial <span id="score">30</span></div>
+        <div class="point"><span id="point">100</span> point</div>
+        <div class="level">level</div>
+        <div id="timer"></div>
+      </div>
+      <div id="the_body_of_the_game" class="the_body_of_the_game">
+        the_body_of_the_game
+      </div>
     </div>
-    
-      <script src="./js/timer.js"></script>
-      <script src="js/list_random.js"></script>
-      <script src="js/score.js"></script>
-      <script src="js/end_game.js"></script>
-</body>
+    <div id="gameOver">"game over"</div>
 
+    <script src="./js/timer.js"></script>
+    <script src="js/list_random.js"></script>
+    <script src="js/score.js"></script>
+    <script src="js/end_game.js"></script>
+  </body>
 </html>
