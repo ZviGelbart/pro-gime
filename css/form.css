@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: skyblue;
+    font-size: 50px;
+}
+.formData{
+    border: solid ;
+    height: 40px;
+    font-size: 20px;
+    
+}
