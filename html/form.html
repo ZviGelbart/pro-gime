@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="/css/form.css">
 </head>
 <body>
-    <form action=""></form>
-        <div class="formBody">
-        First name:<input type="text" name="firstName" pattern=".{6, 25}" title="Enter your name" class="formData"/><br>
-        Last name: <input type="text" name="lastName" pattern=".{6, 25}" title="Enter your family" class="formData"/><br>
-        New password:<input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}" title="The password must contain at least one lowercase letter, one uppercase letter and one number. 6-12 characters" required class="formData"/><br>
-        Confirm Password: <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}" title="The password must contain at least one lowercase letter, one uppercase letter and one number. 6-12 characters" required class="formData"/><br>
-        age: <input type="text" name="age" pattern="[0-9]{0,3}" title="Please enter an age" required class="formData"/>
-        </div>
-    </form>
+    <div class="form">
+        <form>
+            <h2>sign up </h2>
+            <span><i class="fa fa-user" ></i><input type="text" placeholder="first name"></span>
+            <span><i class="fa fa-user" ></i><input type="text" placeholder="last name"></span>
+            <span><i class="fa fa-phone" ></i><input type="tel" placeholder="phone number" maxlength="13"></span>
+            <span><i class="fa fa-envelope" ></i><input type="email" placeholder="email"></span>
+            <span><i class="password" ></i><input type="password" placeholder="password"></span>
+            <span><i class="password" ></i><input type="password" placeholder="confirm password"></span>
+            <a href="/index.html"><input type="submit" value="sign up"></a>
+        </form>
+    </div>
 </body>
 </html>
