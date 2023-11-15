@@ -24,3 +24,4 @@ function compareCards(cardsEqual) {
     numPoint.innerText = newPoint;
   }
 }
+let b =15
