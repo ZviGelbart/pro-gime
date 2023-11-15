@@ -1,3 +1,5 @@
+let number_of_cards = 50;
+
 // Function to create and mix array
 function createArray(number) {
   let newNumber = number / 2;
@@ -24,7 +26,7 @@ function shuffleArray(array) {
   
   // Example usage
 
-let arr = createArray(50);
+let arr = createArray(number_of_cards);
 let mixedArr = shuffleArray(arr) //פה הוא משנה את המשתנה המערך המסודר ופשוט מפעיל על המשתנה של המערך המסודר את העירבוב ועכשיו המערך = מעורבב
 console.log(mixedArr)
 
@@ -58,23 +60,47 @@ function makeTheTable(mixedArr) {
 
 }
 makeTheTable(mixedArr)
-// פונקציה שמתבצעת כאשר תא נלחץ
+
+let firstCard = null;
+let lockBoard = false;
+ 
 function cardClicked(event) {
-  // נקבל את התא שנלחץ
+  if (lockBoard) return;
+
   let clickedCard = event.target;
 
-  // בדיקה האם התא שנלחץ כבר נפתח
+
   if (!clickedCard.classList.contains("hidden")) {
-    // אם כן, ייצא מהפונקציה
     return;
   }
 
-  // הסרת ה-class "hidden"
   clickedCard.classList.remove("hidden");
   clickedCard.classList.add("overt");
 
-  // נוסיף כאן פעולות נוספות שתרצה לבצע כאשר כרטיס נלחץ
+  if (firstCard === null) {
+    firstCard = clickedCard;
+  } else {
+    lockBoard = true;
+
+    if (firstCard.textContent === clickedCard.textContent) {
+      console.log("הכרטיסים זהים!");
+      compareCards(true)
+      resetBoard();
+    } else {
+      setTimeout(() => {
+        firstCard.classList.add("hidden");
+        firstCard.classList.remove("overt");
+        clickedCard.classList.add("hidden");
+        clickedCard.classList.remove("overt");
+        compareCards(false)
+        resetBoard();
+      }, 1000);
+    }
+  }
 }
 
-// הוספת אירוע click לכל תא בטבלה
+function resetBoard() {
+  [firstCard, lockBoard] = [null, false];
+}
+
 document.getElementById("the_body_of_the_game").addEventListener("click", cardClicked);
