@@ -33,13 +33,19 @@ body {
     border: 1px solid;
 
 }
+.point {
+    flex: 1;
+    border: 1px solid;
+
+}
 .level {
     flex: 3;
     border: 1px solid;
 
 }
+
 #timer {
-    flex: 1;
+    flex: 2;
     border: 1px solid;
 
 }
@@ -51,9 +57,10 @@ body {
     border: 1px solid;
     border-radius: 10%;
     background-image:url('https://www.yo-yoo.co.il/data/math/uploads/WNNJxwAbtYQA3LS.jpg') ;
-    background-size: 110% auto; /* 50% מהרוחב, וגובה אוטומטי */
-    text-indent: -9999px;
-    
+    background-size: cover; /* 50% מהרוחב, וגובה אוטומטי */
+    text-indent: -9999px; 
+    width:150px;
+    padding:4%;
 
 }
 table{
@@ -67,12 +74,12 @@ td {
 .overt{
     border: 1px solid;
     border-radius: 10%;
-    background-size: 110% auto; /* % מהרוחב, וגובה אוטומטי */
-    padding: 0;
-    margin: 0;
-    font-size: 150%;
+    background-size: cover; /* % מהרוחב, וגובה אוטומטי */
+    font-size: 450%;
     border-collapse: separate; /* מוריד רכיבי טבלה קיימים כמו border-spacing כדי לא לשתף אותם */
-    border-spacing: 10px 10px; /* רווח ברוחב 20px ובגובה 10px */
+    background-image:url('https://iedit.co.il/wp-content/uploads/2012/11/Fotolia_43864101_XS.jpg') ;
+    
+    
     
     
 }

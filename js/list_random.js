@@ -41,7 +41,7 @@ function makeTheTable(mixedArr) {
 
 
   for (let i of mixedArr) {
-    tableHTML += `<td class="hidden" name="${i}" style="width:150px; padding:4%;"> ${i} </td>`;
+    tableHTML += `<td class="hidden" name="${i}"> ${i} </td>`;
     column_counter += 1;
     if (column_counter === column) {
       tableHTML += `</tr><tr>`;
