@@ -27,6 +27,7 @@ function shuffleArray(array) {
 let arr = createArray(50);
 let mixedArr = shuffleArray(arr) //פה הוא משנה את המשתנה המערך המסודר ופשוט מפעיל על המשתנה של המערך המסודר את העירבוב ועכשיו המערך = מעורבב
 console.log(mixedArr)
+
 function makeTheTable(mixedArr) {
   let column  = 0;
   if (mixedArr.length === 36) {
@@ -57,3 +58,23 @@ function makeTheTable(mixedArr) {
 
 }
 makeTheTable(mixedArr)
+// פונקציה שמתבצעת כאשר תא נלחץ
+function cardClicked(event) {
+  // נקבל את התא שנלחץ
+  let clickedCard = event.target;
+
+  // בדיקה האם התא שנלחץ כבר נפתח
+  if (!clickedCard.classList.contains("hidden")) {
+    // אם כן, ייצא מהפונקציה
+    return;
+  }
+
+  // הסרת ה-class "hidden"
+  clickedCard.classList.remove("hidden");
+  clickedCard.classList.add("overt");
+
+  // נוסיף כאן פעולות נוספות שתרצה לבצע כאשר כרטיס נלחץ
+}
+
+// הוספת אירוע click לכל תא בטבלה
+document.getElementById("the_body_of_the_game").addEventListener("click", cardClicked);
