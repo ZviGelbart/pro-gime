@@ -1,7 +1,7 @@
 function reduceRound() {
   let RoundNumber = document.getElementById("score");
   let numberOfRoundNumber = parseInt(RoundNumber.innerText);
-  if (numberOfRoundNumber > -1) {
+  if (numberOfRoundNumber > 0) {
     let newRound = numberOfRoundNumber - 1;
     RoundNumber.innerText = newRound;
     return true;
