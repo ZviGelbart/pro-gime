@@ -84,15 +84,24 @@ function cardClicked(event) {
     firstCard = clickedCard;
   } else {
     lockBoard = true;
-
+    var audio_true = new Audio('http://www.oxeyegames.com/files/dm_examples/simplebreak/bounce.wav');
+    var audio_false = new Audio('http://www.oxeyegames.com/files/dm_examples/simplebreak/break.wav');
     if (firstCard.textContent === clickedCard.textContent) {
+      firstCard.classList.add("set");
+      firstCard.classList.remove("overt");
+      clickedCard.classList.add("set");
+      clickedCard.classList.remove("overt");
       console.log("הכרטיסים זהים!");
+      audio_true.play();
       compareCards(true)
       reduceRound()
       resetBoard();
-    
+      
+
+
     } else {
       setTimeout(() => {
+        audio_false.play()
         firstCard.classList.add("hidden");
         firstCard.classList.remove("overt");
         clickedCard.classList.add("hidden");
@@ -105,8 +114,15 @@ function cardClicked(event) {
   }
 }
 
+
 function resetBoard() {
   [firstCard, lockBoard] = [null, false];
 }
 
 document.getElementById("the_body_of_the_game").addEventListener("click", cardClicked);
+
+let game_over = document.querySelector('.the_game');
+function end_the_game() {
+  game_over.classList.add("game_over");
+  game_over.classList.add("game_over_message");
+}
