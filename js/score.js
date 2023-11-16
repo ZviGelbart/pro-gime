@@ -17,6 +17,11 @@ function compareCards(cardsEqual) {
     let parsPoint = parseInt(numPoint.innerText);
     let newPoint = parsPoint + 100;
     numPoint.innerText = newPoint;
+    let score = document.getElementById("score");
+    let numScore =parseInt(score.innerText);
+    let newRuond = numScore +2;
+    score.innerText = newRuond;
+
   } else {
     let numPoint = document.getElementById("point");
     let parsPoint = parseInt(numPoint.innerText);
@@ -24,4 +29,4 @@ function compareCards(cardsEqual) {
     numPoint.innerText = newPoint;
   }
 }
-let b =15
+
