@@ -122,8 +122,17 @@ function resetBoard() {
 document.getElementById("the_body_of_the_game").addEventListener("click", cardClicked);
 
 let game_over = document.querySelector('.the_game');
+let The_head_is_hidden = document.querySelector('.head_of_the_game');
+let The_win_is_hidden = document.querySelector('.win');
 function end_the_game() {
-  
+  document.getElementById("sum_points").innerHTML = document.getElementById('point').innerText
+  document.getElementById("sum_rounds").innerHTML = document.getElementById('score').innerText
+  document.getElementById("sum_timer").innerHTML = document.getElementById('timer').innerText
+  // firstCard.classList.add("hidden");
+  The_head_is_hidden.classList.add('head_is_hidden');
+  The_win_is_hidden.classList.remove('none');
   game_over.classList.add("game_over_1");
   game_over.classList.add("game_over_message");
+
+
 }
