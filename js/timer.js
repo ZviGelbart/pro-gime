@@ -1,6 +1,6 @@
 
 // הזמן בשניות
-let countdown = 35;
+let countdown = 4;
 var audio_end = new Audio('https://www.bathwerks.com/polycom/Warble.wav');
 // var audio_end_15_1= new Audio('http://www.simphonics.com/library/WaveFiles/Production%20Wavefiles/MISC/-WPTWARN.WAV');
 
@@ -27,7 +27,7 @@ function startTimer() {
         let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
         let milliseconds = String(remainingTime % 1000).charAt(0); // תמיד שלוש ספרות
 
-        if (seconds < 30 && seconds > 20){
+        if (seconds < 20 && seconds > 0){
             audio_end.play()
         }
         // if (seconds < 25 && seconds > 1 ){
@@ -40,7 +40,8 @@ function startTimer() {
         // בדיקה האם הטיימר הסתיים
         if (remainingTime <= 0) {
             clearInterval(timerInterval); // עצירת הטיימר
-            document.getElementById('timer').innerText = "הטיימר הסתיים";
+            document.getElementById('timer').innerText = "";
+            end_the_game();
         }
     }
 

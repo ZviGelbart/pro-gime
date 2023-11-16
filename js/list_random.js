@@ -123,6 +123,7 @@ document.getElementById("the_body_of_the_game").addEventListener("click", cardCl
 
 let game_over = document.querySelector('.the_game');
 function end_the_game() {
-  game_over.classList.add("game_over");
+  
+  game_over.classList.add("game_over_1");
   game_over.classList.add("game_over_message");
 }

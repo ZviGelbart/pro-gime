@@ -139,11 +139,11 @@ td {
 
 }
 
-.game_over {
+.game_over_1 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(12, 12, 12, 0.2)2);
+    background: rgba(12, 12, 12, 0.2);
     /* כאן תכניס את גוון הצבע של הזכוכית */
     pointer-events: none;
 }

@@ -6,7 +6,7 @@ function reduceRound() {
     RoundNumber.innerText = newRound;
     return true;
   } else {
-    return false;
+    end_the_game();
   }
 }
 
@@ -26,7 +26,11 @@ function compareCards(cardsEqual) {
     let numPoint = document.getElementById("point");
     let parsPoint = parseInt(numPoint.innerText);
     let newPoint = parsPoint - 10;
-    numPoint.innerText = newPoint;
+    if(newPoint > 0){
+      numPoint.innerText = newPoint;
+    }else{
+      end_the_game();
+    }
   }
 }
 

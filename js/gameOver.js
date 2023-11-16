@@ -1,6 +1,13 @@
-function endGame(time,point,level){
-    let document
-    if (time === 0 | point=== 0 | level === 0){
-        return // בדייב פןנקציה שמעלה את סןף את המשחק
+function endGame(){
+   
+    let time = document.getElementById('timer').innerText
+    // let point = document.getElementById('point').innerText
+    // let level = document.getElementById('score').innerText
+    if (time === "00"){
+        
+        end_the_game();
+    }else{
+        return;
     }
 }
+setTimeout(endGame,1000)
