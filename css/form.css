@@ -20,7 +20,10 @@ body{
     width: 40%;
     height: 600px;
     margin: 30px auto 0;
-    overflow: hidden;
+   
+}
+#head{
+    font-size: 150px;
 }
 
 h1,h2{
