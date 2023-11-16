@@ -1,6 +1,6 @@
 
 // הזמן בשניות
-let countdown = 4;
+let countdown = 60;
 var audio_end = new Audio('https://www.bathwerks.com/polycom/Warble.wav');
 // var audio_end_15_1= new Audio('http://www.simphonics.com/library/WaveFiles/Production%20Wavefiles/MISC/-WPTWARN.WAV');
 
@@ -27,12 +27,10 @@ function startTimer() {
         let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
         let milliseconds = String(remainingTime % 1000).charAt(0); // תמיד שלוש ספרות
 
-        if (seconds < 20 && seconds > 0){
+        if (seconds < 20 && seconds > 0 && minutes < 1){
             audio_end.play()
         }
-        // if (seconds < 25 && seconds > 1 ){
-        //     audio_end_15_1.play()
-        // }
+        
 
         // עדכון הטקסט ב-DOM
         document.getElementById('timer').innerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}:${milliseconds}`;
