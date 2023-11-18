@@ -1,6 +1,6 @@
 
 // הזמן בשניות
-let countdown = 150;
+let countdown = 300;
 var audio_end = new Audio('https://www.bathwerks.com/polycom/Warble.wav');
 // var audio_end_15_1= new Audio('http://www.simphonics.com/library/WaveFiles/Production%20Wavefiles/MISC/-WPTWARN.WAV');
 
